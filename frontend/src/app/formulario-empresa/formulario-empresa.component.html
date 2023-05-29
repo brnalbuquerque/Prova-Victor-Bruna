@@ -1,0 +1,26 @@
+<div class="container">
+<h2>Cadastro de Empresas</h2>
+
+  <form (ngSubmit)="salvarDados()" #formulario="ngForm">
+    <div>
+      <br>
+      <label for="empresa">Empresa:</label>
+      <br>
+      <input type="text" id="empresa" name="empresa" [(ngModel)]="empresa" required>
+    </div>
+
+    <div>
+      <br>
+      <label for="categoria">Categoria:</label>
+      <br>
+      <input type="text" id="categoria" name="categoria" [(ngModel)]="categoria" required>
+    </div>
+    <br>
+    <button type="submit">Salvar</button>
+  </form>
+</div>
+
+
+<div *ngIf="mensagemSalvo">
+  <h3>Dados salvos com sucesso!</h3>
+</div>
